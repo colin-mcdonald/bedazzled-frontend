@@ -1,0 +1,89 @@
+{ "events": [
+        { 
+            "date": "February 23 - 26",
+            "location": "Richmond Hill Centre for the Art",
+            "city": "Richmond Hiill, ON",
+            "status": "sold_out"
+        },
+        {
+            "date": "March 02 - 05",
+            "location": "River Run Centre",
+            "city": "Guelph, ON ",
+            "status": "limited_space"
+        },
+        {
+            "date": "March 23 - 26",
+            "location": "Centennial Hall",
+            "city": "London, ON",
+            "status": "sold_out"
+        },
+        {
+            "date": "March 30 - April 02",
+            "location": "Showplace Theatre",
+            "city": "Peterborough, ON",
+            "status": "sold_out"
+        },
+        {
+            "date":  "April 06 - 09",
+            "location": "Blue Mountain Resort",
+            "city": "Collingwood, ON",
+            "status": "sold_out"
+        },
+        {
+            "date":  "April 20 - 23",
+            "location": "Rose Theatre", 
+            "city": "Brampton, ON",
+            "status": "sold_out"
+        },
+        {
+            "date":  "April 27 - 30",
+            "location": "The Burlington Performing Arts Centre",
+            "city": "Burlington, ON",
+            "status": "limited_space"
+        },
+        {
+            "date":  "May 04 - 07",
+            "location": "Richmond Hill Centre for the Arts",
+            "city" : "Richmond Hill, ON",
+            "status": "sold_out"
+        },
+        {
+            "date":  "May 11 - 14 2017",
+            "location": "Blue Mountain Resort INN",
+            "city" : "Colingwood, ON",
+            "status": "sold_out"
+        },
+        {
+            "date":  "May 18 - 21",
+            "location": "River Run Centre",
+            "city" : "Guelph, ON",
+            "status": "sold_out"
+        },
+        {
+            "date":  "May 25 - 28",
+            "location": "Americana Resort & Spa",
+            "city" : "Niagara Falls, ON",
+            "status": "sold_out"
+        },
+        {
+            "date":  "June 01 - 04",
+            "location": "Blue Mountain Resort",
+            "city" : "Colingwood, ON",
+            "status": "sold_out"
+        },
+        {
+            "date":  "July 02 - 03",
+            "event_type": "pageant",
+            "location": "Blue Mountain Resort",
+            "city" : "Colingwood, ON",
+            "status": ""
+        },
+        {
+            "date":  "July 04 - 08",
+            "event_type": "finals",
+            "location": "Blue Mountain Resort",
+            "city" : "Colingwood, ON",
+            "status": ""
+        }
+    ]
+}

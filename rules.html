@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bedazzled Dance Champions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background-color:#eee;
+    }
+
+    .navbar-inverse {
+        background-color: #260426;
+        border-color: #080808;
+        opacity: 0.90;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    .navbar-inverse li {
+      height:49px;
+      color:white;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #ccc;
+    }
+
+    .navbar-inverse li:hover, .navbar-inverse li.active {
+        border-bottom: 3px solid white;
+        background-color: #260426;
+        opacity: 0.90;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      border:0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      color:white;
+      background-color: #260426;
+      padding: 25px;
+    }
+    
+    #eventsCarousel .carousel-inner {
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+        min-height:200px;
+    }
+
+    #eventsCarousel .carousel-control {
+      background:none;
+    }
+
+  #heroCarousel .carousel-inner div.item {
+      width: 100%; 
+      margin: auto;
+      min-height:650px;
+      max-height:650px;
+      height:650px;
+      background-position: center;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (min-width: 750px) {
+    #mobile-hero {
+      display:none;
+    }
+  }
+  @media (max-width: 750px) {
+    #mobile-hero {
+      display:block;
+    }
+
+    #heroCarousel {
+      display:none;
+    }
+  }
+
+  .navbar {
+    text-transform: uppercase;
+  }
+
+  .bedazzled--main-foot-dots > .dot {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      display: inline-block;
+      margin: 5px;
+      position: relative;
+  }
+
+  .bedazzled--main-foot-dots > .dot > a > .fa {
+      cursor: pointer;
+      color: #000;
+      position: absolute;
+      left: 10px;
+      top: 12px;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav navbar">
+        <li><a href="/login.html">Login/Register</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/events.html">Events</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li class="active"><a href="/rules.html">Rules</a></li>
+        <li><a href="/testimonials.html">Testimonials</a></li>
+<!--         <li><a href="#">Contact</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="width:100%;text-align:center;padding:30px;background-color:white;">
+  <img src="bedazzled_logo_block_color.png" class="img-responsive center-block" style="max-width:800px;">
+</div>
+
+<div style="width:100%;text-align:center;padding:60px;text-transform:uppercase;font-weight:bold;color:white;background:linear-gradient(141deg, #0f4bb8 0%, #2c80e8 51%, #2c6ee8 75%)">
+  <h1>Rules &amp; Regulations</h1>
+</div>
+
+<style type="text/css">
+ .rounded-well {
+    padding:0;
+    width:100%;
+    background-color:white;
+  }
+
+  .rounded-well h1 {
+    font-size: 24px;
+  }
+
+  .rounded-well .well-heading {
+    padding:5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color:#260426;
+    color:white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .rounded-well .well-body {
+    padding:30px;
+    border: 1px solid #260426;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+    box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+  }
+
+   label {
+    font-weight: bold;
+    margin-top:10px;
+   }
+
+   .btn-bedazzled {
+    background-color:#8f19fa;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 500;
+   }
+
+   ul.rules {
+      line-height:1.5em;
+      margin: 1em 0;
+      padding: 0 0 0 40px;
+   }
+
+   ul.rules li {
+      margin: 1em 0;
+   }
+</style>
+
+<div class="container" style="margin-top:30px;">
+  <div class="row">
+
+    <div class="col col-lg-2"></div>
+    <div class="col col-lg-8" style="margin-top:40px;">
+      <div class="rounded-well">
+        <div class="well-heading">
+          <h1>Rules &amp; Regulations</h1>
+        </div>
+
+        <div class="well-body">
+          <ul class="rules">
+            <li>Payment in full must be received with your entries by a Studio cheque.</li>
+
+            <li>Every competition will have a limited number of entries accepted on a first come basis.</li>
+
+            <li>There is no limit of entries any one studio may enter, but dancers may not compete against themselves in any age division or category in the same dance form (e.g. If a performer has 2 jazz solo's they may perform one routine in the next age group up). Only groups you may be in the same category but not more then 50% can be the same dancers.</li>
+
+            <li>In order to qualify for overall awards a minimum of 5 group numbers must be entered by a studio with the exception of our Pre-Competitive Division you must enter a minimum of 3 group numbers in order to qualify for Overalls. If a dancers does not dance in their scheduled category when there are other competitors and dances at a later time they will not be entitled to qualify for overalls awards however a dancer may dance ahead of schedule and their mark will be held until the category has danced. If they choose to dance after the category has already danced they will dance for a mark only and will not qualify for overalls!</li>
+
+            <li>Bedazzled Dance Champions reserves the right to add or subtract days or move a competition due to unforeseen circumstances.</li>
+
+            <li>All award money is awarded to the studio Director!</li>
+
+            <li>A contestant making a second attempt to a routine may be adjudicated and will be marked but will not place in the category or qualify for overall awards, except in the Novice division.</li>
+
+            <li>Only teachers can be back stage, in the wings or in the music area during the competition, all others will be asked to leave.</li>
+
+            <li>Prohibited - Video taping and photography of any kind this is for the safety of all dancers, our events are a non ticketed open door show which means anyone can come and watch, therefore this is the reason that we DO NOT allow any photography or video taping of any sort, do to the safety of all dancers. Also Prohibited are live animals and any routines that contain fire pyrotechnic devices, swords and knives, failure to comply with this policy could result in disqualification!</li>
+
+            <li>NEW - absolutely NO baby powder, gels, paint, dirt etc. to be used during a routine</li>
+
+            <li>Bedazzled Dance Champions reserves the right to cancel any competition if enough entries are not received to run the competition.</li>
+
+            <li>By entering the competition, Parents, instructors, Directors, and contestants give their permission to Bedazzled dance champions to use their pictures and performance in advertisement (e.g. Brochures, programs, on our Website, etc.)</li>
+
+            <li>Bedazzled Dance Champions reserves the right to refuse individual or studio entries at their discretion, in which fees will be refunded. Refunds will not be made for any other reasons except for injuries (with a doctor's note) in which a credit will be given to use at our Finals or a future Bedazzled Dance Champions Regional.</li>
+
+            <li>No smoking or eating in the competition area.</li>
+          </ul>
+
+          <hr>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+<footer class="container-fluid text-center">
+  <div class="row bedazzled--main-foot-row">
+    <div class="col-sm-4">
+      <div class="bedazzled--main-foot-titles">
+         <img src="bedazzled_block_text.png" style="width:325px;margin-top:30px;">
+      </div>
+    </div>
+    <div class="col-sm-4" style="padding-top:30px;">
+      <address class="bedazzled--main-foot-addr">
+        Bedazzled Dance Champions, Inc.<br>
+        Tracy Covelli, Director<br>
+        <a href="tel:19054651593" style="color:white;">(905) 465-1593</a><br>
+        <a href="mailto:bedazzled@bellnet.ca?subject=Bedazzled%20Dance%20Champions" style="color:white;">bedazzled@bellnet.ca</a>
+      </address>
+    </div>
+    <div class="col-sm-4" style="padding-top:30px;">
+      <div class="bedazzled--main-foot-dots">
+        <div class="dot">
+          <a href="mailto:bedazzled@bellnet.ca?subject=Bedazzled%20Dance%20Champions">
+            <i class="fa fa-envelope fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="dot">
+          <a href="https://www.youtube.com/user/TheRXMI/videos">
+            <i class="fa fa-youtube-play fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="dot">
+          <a href="https://www.twitter.com/BedazzledDance">
+            <i class="fa fa-twitter fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

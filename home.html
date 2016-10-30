@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bedazzled Dance Champions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    .navbar-inverse {
+        background-color: #260426;
+        border-color: #080808;
+        opacity: 0.90;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    .navbar-inverse li {
+      height:49px;
+      color:white;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #ccc;
+    }
+
+    .navbar-inverse li:hover, .navbar-inverse li.active {
+        border-bottom: 3px solid white;
+        background-color: #260426;
+        opacity: 0.90;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      border:0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      color:white;
+      background-color: #260426;
+      padding: 25px;
+    }
+    
+    #eventsCarousel .carousel-inner {
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+        min-height:200px;
+    }
+
+    #eventsCarousel .carousel-control {
+      background:none;
+    }
+
+  #heroCarousel .carousel-inner div.item {
+      width: 100%; 
+      margin: auto;
+      min-height:650px;
+      max-height:650px;
+      height:650px;
+      background-position: center;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (min-width: 750px) {
+    #mobile-hero {
+      display:none;
+    }
+  }
+  @media (max-width: 750px) {
+    #mobile-hero {
+      display:block;
+    }
+
+    #heroCarousel {
+      display:none;
+    }
+  }
+
+  .navbar {
+    text-transform: uppercase;
+  }
+
+  .bedazzled--main-foot-dots > .dot {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      display: inline-block;
+      margin: 5px;
+      position: relative;
+  }
+
+  .bedazzled--main-foot-dots > .dot > a > .fa {
+      cursor: pointer;
+      color: #000;
+      position: absolute;
+      left: 10px;
+      top: 12px;
+  }
+
+
+
+  
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav navbar">
+        <li><a href="/login.html">Login/Register</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="/home.html">Home</a></li>
+        <li><a href="/events.html">Events</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/rules.html">Rules</a></li>
+        <li><a href="/testimonials.html">Testimonials</a></li>
+<!--         <li><a href="#">Contact</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style type="text/css">
+  #mobile-hero {
+    background-color:#5dd6c6;
+    width:100%;
+    text-align:center;
+    padding:10px;
+    padding-top:50px;
+    padding-bottom:50px;
+  }
+</style>
+
+<div id="mobile-hero">
+    <img src="bedazzled_logo_remake.png" class='img-responsive center-block'>
+</div>
+
+<div style="width:100%;text-align:center;padding:30px;">
+  <img src="bedazzled_logo_block_color.png" class="img-responsive center-block" style="max-width:800px;">
+</div>
+
+<div id="heroCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#heroCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" style="background-image:url('banner_2.jpg');">
+        <!-- <img src="bedazzled_logo_remake.png" style="width:460px;top:95px;left:150px;position:absolute;"> -->
+        <!-- <img src="bedazzled_logo_block_color.png"> -->
+      </div>
+
+      <div class="item" style="background-image:url('banner_1.png');">
+ 
+        <div style="width:400px;top:125px;left:150px;position:absolute;">
+          <img src="bedazzled_block_text.png" style="width:400px;">
+          <br><br>
+
+          <a href="/events.html">
+            <img src="events_button.png" style="width:250px;">
+          </a>
+        </div>
+      <!-- <img src="bedazzled_logo_text.png" style="width:500px;top:100px;left:100px;position:absolute;"> -->
+        <div class="carousel-caption">
+<!--           <h3>More Sell $</h3>
+          <p>Lorem ipsum...</p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#heroCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#heroCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div> 
+  
+  <style type="text/css">
+    .event-item {
+      padding:10px;
+      height:200px;
+      border:3px solid white;
+      color:white;
+      background-size: cover;
+      text-shadow: 2px 2px black;
+      cursor:pointer;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+    }
+
+    .event-item:hover{
+      -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 2, 212, 0.67);
+      -moz-box-shadow:    0px 0px 15px 0px rgba(255, 2, 212, 0.67);
+      box-shadow:         0px 0px 15px 0px rgba(255, 2, 212, 0.67);
+    }
+
+    .event-item h1 {
+      font-size:20px;
+      text-transform: uppercase;
+    }
+
+    .event-item h2 {
+      font-size:16px;
+    }
+
+    .event-item h3 {
+      font-size:14px;
+    }
+
+    .event-row {
+      padding:100px;
+      padding-top:40px; 
+      padding-bottom:40px;
+    }
+
+    #events_list {
+      padding-bottom: 40px;
+    }
+  </style>
+
+
+<div id="eventsCarousel" class="carousel slide" data-ride="carousel" style="margin-top:-15px;background-color:#eee">
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-12">
+          <h3 class="center-block" style="text-align:center;color:darkgrey;margin-left:40px;margin-top:20px;text-transform: uppercase;">Our <strong>2017</strong> Events</h3>
+        </div> 
+      </div>
+    </div>
+    <div class="carousel-inner" role="listbox" id="events_list"></div>
+
+    <a class="left carousel-control" href="#eventsCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#eventsCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div> 
+
+<style type="text/css">
+
+.bedazzled--featurette {
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height:235px;
+}
+
+.bedazzled--featurette > img {
+    transition: all 0.7s;
+}
+.bedazzled--featurette:hover > img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.bedazzled--featurette > h1 {
+    font-size: 12pt;
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding-top: 10px;
+    background-color: rgba(187, 105, 236, 0.65);
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    vertical-align: bottom;
+}
+
+.bedazzled--featurette-plain {
+    text-transform: uppercase;
+    display: block;
+    background-color: #14f1f3;
+    color: #FFF;
+    font-size: 32pt;
+    text-align: center;
+    width: 100%;
+}
+.bedazzled--featurette-plain::after {
+    content: "";
+    display: block;
+    background-color: #FFF;
+    margin: 12px auto;
+    transition: width 0.2s ease-in-out 0s;
+    width: 120px;
+    height: 6px;
+}
+</style>
+
+<div class="container text-center" style="padding-top:60px;padding-bottom:60px;">
+<!--   <h3>What We Do</h3><br> -->
+  <div class="row">
+    <div class="col-sm-4">
+      <a href="/galleries" class="bedazzled--featurette" style="background-image:url('photo_gallery.png')">
+        <img src="photo_gallery.png" class="img-responsive" alt="Image">
+        <h1>Check out our Photo &amp; Video Gallery!</h1>
+      </a>
+    </div>
+    <div class="col-sm-4">
+      <a href="/about.html" class="bedazzled--featurette-plain" style="height:235px;padding-top:20%;">about us</a>
+    </div>
+    <div class="col-sm-4">
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:37.4537037037% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BHV8TRRDb2b/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Absolutely SPEECHLESS from the last two days. Our Dazzlin&#39; Dance Pageant was beyond words. We are so proud of each and every one of our dancers. You all put 110% into each audition class , and your performances... Congratulations to all our dancers , audition class highest mark winners and to all our Miss &amp; Mister title winners. You ALL left your hearts on the stage, we are so blessed and again are so proud of you all. #bedazzleddanceofficial #bedazzleddancefinals #dazzlindancepageant</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A photo posted by Tracy &amp; MC Mark (@bedazzleddanceofficial) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-07-02T02:46:58+00:00">Jul 1, 2016 at 7:46pm PDT</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+    </div>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <div class="row bedazzled--main-foot-row">
+    <div class="col-sm-4">
+      <div class="bedazzled--main-foot-titles">
+         <img src="bedazzled_block_text.png" style="width:325px;margin-top:30px;">
+      </div>
+    </div>
+    <div class="col-sm-4" style="padding-top:30px;">
+      <address class="bedazzled--main-foot-addr">
+        Bedazzled Dance Champions, Inc.<br>
+        Tracy Covelli, Director<br>
+        <a href="tel:19054651593" style="color:white;">(905) 465-1593</a><br>
+        <a href="mailto:bedazzled@bellnet.ca?subject=Bedazzled%20Dance%20Champions" style="color:white;">bedazzled@bellnet.ca</a>
+      </address>
+    </div>
+    <div class="col-sm-4" style="padding-top:30px;">
+      <div class="bedazzled--main-foot-dots">
+        <div class="dot">
+          <a href="mailto:bedazzled@bellnet.ca?subject=Bedazzled%20Dance%20Champions">
+            <i class="fa fa-envelope fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="dot">
+          <a href="https://www.youtube.com/user/TheRXMI/videos">
+            <i class="fa fa-youtube-play fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="dot">
+          <a href="https://www.twitter.com/BedazzledDance">
+            <i class="fa fa-twitter fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script type="text/javascript">
+  $(function() {
+    var colorImages = ['1.jpg', '2.jpg', '4.jpg', '3.jpg', '5.jpg'];
+
+    $.get('event_images/events.json', {}, function(data) {
+
+      var currentList = null;
+
+      data.events.forEach(function(e, i) {
+        if (i%3 === 0 || !currentList) {
+          if (currentList) {
+            $('#events_list').append($('<div>')
+                          .addClass('item')
+                          .addClass($('#events_list').children().length < 1 ? 'active' : '')
+                          .append(
+                              $('<div>')
+                                .addClass('container')
+                                .append(currentList)));
+          }
+
+          currentList = $('<div>').addClass('event-row');
+        }
+        
+        // console.log(i, e)
+        var imageName = colorImages[i%colorImages.length];
+        currentList.append($('<div>').addClass('col').addClass('col-md-4').addClass('event-item').css('background-image', "url('event_images/colored/" + imageName + "')").append($('<h1>').text(e.date)).append($('<h2>').text(e.location)).append($('<h3>').text(e.city)));
+      });
+
+      $('#events_list').append($('<div>')
+              .addClass('item')
+              .addClass($('#events_list').children().length < 1 ? 'active' : '')
+              .append(
+                  $('<div>')
+                    .addClass('container')
+                    .append(currentList)));
+          
+      $('.event-item').click(function() {
+        window.location.href = '/events';
+      });
+
+    }, 'json').fail(function(e) {
+      console.error( "error", e );
+    });
+  }) 
+</script>
+
+</body>
+</html>

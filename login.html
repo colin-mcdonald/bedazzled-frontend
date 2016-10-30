@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bedazzled Dance Champions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background-color:#eee;
+    }
+
+    .navbar-inverse {
+        background-color: #260426;
+        border-color: #080808;
+        opacity: 0.90;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    .navbar-inverse li {
+      height:49px;
+      color:white;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #ccc;
+    }
+
+    .navbar-inverse li:hover, .navbar-inverse li.active {
+        border-bottom: 3px solid white;
+        background-color: #260426;
+        opacity: 0.90;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      border:0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      color:white;
+      background-color: #260426;
+      padding: 25px;
+    }
+    
+    #eventsCarousel .carousel-inner {
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+        min-height:200px;
+    }
+
+    #eventsCarousel .carousel-control {
+      background:none;
+    }
+
+  #heroCarousel .carousel-inner div.item {
+      width: 100%; 
+      margin: auto;
+      min-height:650px;
+      max-height:650px;
+      height:650px;
+      background-position: center;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (min-width: 750px) {
+    #mobile-hero {
+      display:none;
+    }
+  }
+  @media (max-width: 750px) {
+    #mobile-hero {
+      display:block;
+    }
+
+    #heroCarousel {
+      display:none;
+    }
+  }
+
+  .navbar {
+    text-transform: uppercase;
+  }
+
+  .bedazzled--main-foot-dots > .dot {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      display: inline-block;
+      margin: 5px;
+      position: relative;
+  }
+
+  .bedazzled--main-foot-dots > .dot > a > .fa {
+      cursor: pointer;
+      color: #000;
+      position: absolute;
+      left: 10px;
+      top: 12px;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav navbar">
+        <li class="active"><a href="/login.html">Login/Register</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/events.html">Events</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/rules.html">Rules</a></li>
+        <li><a href="/testimonials.html">Testimonials</a></li>
+<!--         <li><a href="#">Contact</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="col col-lg-12 width:100%;text-align:center;padding:30px;background-color:white;">
+  <div style="max-width:800px;" class="center-block">
+    <img src="bedazzled_logo_block_color.png" class="img-responsive">
+  </div>
+</div>
+
+<div style="width:100%;text-align:center;padding:60px;text-transform:uppercase;font-weight:bold;color:white;background:linear-gradient(141deg, #929292 0%, #415369 51%, #484f6b 75%)">
+  <h1>Register Now</h1>
+</div>
+
+<style type="text/css">
+ .rounded-well {
+    padding:0;
+    width:100%;
+    background-color:white;
+  }
+
+  .rounded-well h1 {
+    font-size: 24px;
+  }
+
+  .rounded-well .well-heading {
+    padding:5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color:#260426;
+    color:white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .rounded-well .well-body {
+    padding:30px;
+    border: 1px solid #260426;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+    box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+  }
+
+   label {
+    font-weight: bold;
+    margin-top:10px;
+   }
+
+   .btn-bedazzled {
+    background-color:#8f19fa;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 500;
+   }
+</style>
+
+<div class="container" style="margin-top:30px;">
+
+  <div class="row">
+
+  <!-- <div class="col col-lg-1"></div> -->
+
+    <div class="col col-lg-9" style="margin-top:40px;">
+      <div class="rounded-well">
+        <div class="well-heading">
+          <h1>Registration</h1>
+        </div>
+        <div class="well-body">
+          <div class="row">
+            <div class="col col-lg-6">
+              <label for="">First Name</label>
+              <input type="text" class="form form-control">
+            </div>
+            <div class="col col-lg-6">
+              <label for="">Last Name</label>
+              <input type="text" class="form form-control">
+            </div>            
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-12">
+              <label for="">Email</label>
+              <input type="text" class="form form-control">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-6">
+              <label for="">Password</label>
+              <input type="text" class="form form-control">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-6">
+              <label for="">Confirm Password</label>
+              <input type="text" class="form form-control">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-12">
+              <label for="">Email</label>
+              <input type="text" class="form form-control">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-12">
+              <label for="">Phone Number</label>
+              <input type="text" class="form form-control">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-12">
+              <label for="">Address</label>
+              <input type="text" class="form form-control">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-12">
+              <label for="">City</label>
+              <input type="text" class="form form-control">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-12">
+              <label for="">Organization Type</label>
+              <!-- <input type="text" class="form form-control"> -->
+              <select class="form form-control">
+                <option>Studio</option>
+                <option>Highschool</option>
+                <option>Independent</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col col-lg-12">
+                <br>
+                <button class="btn btn-lg-info btn-bedazzled">Register</button>
+            </div>
+          </div>
+
+          <hr>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-lg-3" style="margin-top:40px;">
+      <div class="rounded-well">
+        <div class="well-heading">
+          <h1>Login</h1>
+        </div>
+        <div class="well-body">
+          If you already have an account, you can login now.
+          <hr>
+          <a href="http://manage.bedazzleddance.com/login">
+            <button class="btn btn-lg-info btn-bedazzled center-block">Login</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<br><br><br>
+
+<footer class="container-fluid text-center">
+  <div class="row bedazzled--main-foot-row">
+    <div class="col-sm-4">
+      <div class="bedazzled--main-foot-titles">
+         <img src="bedazzled_block_text.png" style="width:325px;margin-top:30px;">
+      </div>
+    </div>
+    <div class="col-sm-4" style="padding-top:30px;">
+      <address class="bedazzled--main-foot-addr">
+        Bedazzled Dance Champions, Inc.<br>
+        Tracy Covelli, Director<br>
+        <a href="tel:19054651593" style="color:white;">(905) 465-1593</a><br>
+        <a href="mailto:bedazzled@bellnet.ca?subject=Bedazzled%20Dance%20Champions" style="color:white;">bedazzled@bellnet.ca</a>
+      </address>
+    </div>
+    <div class="col-sm-4" style="padding-top:30px;">
+      <div class="bedazzled--main-foot-dots">
+        <div class="dot">
+          <a href="mailto:bedazzled@bellnet.ca?subject=Bedazzled%20Dance%20Champions">
+            <i class="fa fa-envelope fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="dot">
+          <a href="https://www.youtube.com/user/TheRXMI/videos">
+            <i class="fa fa-youtube-play fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="dot">
+          <a href="https://www.twitter.com/BedazzledDance">
+            <i class="fa fa-twitter fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

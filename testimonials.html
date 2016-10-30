@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bedazzled Dance Champions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      background-color:#eee;
+    }
+
+    .navbar-inverse {
+        background-color: #260426;
+        border-color: #080808;
+        opacity: 0.90;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    .navbar-inverse li {
+      height:49px;
+      color:white;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #ccc;
+    }
+
+    .navbar-inverse li:hover, .navbar-inverse li.active {
+        border-bottom: 3px solid white;
+        background-color: #260426;
+        opacity: 0.90;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+    }
+
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      border:0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      color:white;
+      background-color: #260426;
+      padding: 25px;
+    }
+    
+    #eventsCarousel .carousel-inner {
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+        min-height:200px;
+    }
+
+    #eventsCarousel .carousel-control {
+      background:none;
+    }
+
+  #heroCarousel .carousel-inner div.item {
+      width: 100%; 
+      margin: auto;
+      min-height:650px;
+      max-height:650px;
+      height:650px;
+      background-position: center;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (min-width: 750px) {
+    #mobile-hero {
+      display:none;
+    }
+  }
+  @media (max-width: 750px) {
+    #mobile-hero {
+      display:block;
+    }
+
+    #heroCarousel {
+      display:none;
+    }
+  }
+
+  .navbar {
+    text-transform: uppercase;
+  }
+
+  .bedazzled--main-foot-dots > .dot {
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      display: inline-block;
+      margin: 5px;
+      position: relative;
+  }
+
+  .bedazzled--main-foot-dots > .dot > a > .fa {
+      cursor: pointer;
+      color: #000;
+      position: absolute;
+      left: 10px;
+      top: 12px;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav navbar">
+        <li><a href="/login.html">Login/Register</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/events.html">Events</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/rules.html">Rules</a></li>
+        <li class="active"><a href="/testimonials.html">Testimonials</a></li>
+<!--         <li><a href="#">Contact</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="col col-lg-12 width:100%;text-align:center;padding:30px;background-color:white;">
+  <div style="max-width:800px;" class="center-block">
+    <img src="bedazzled_logo_block_color.png" class="img-responsive">
+  </div>
+</div>
+
+<div style="width:100%;text-align:center;padding:60px;text-transform:uppercase;font-weight:bold;color:white;background:linear-gradient(141deg, #50b80f 0%, #c2e82c 51%, #cae82c 75%)">
+  <h1>Testimonials</h1>
+</div>
+
+<style type="text/css">
+ .rounded-well {
+    padding:0;
+    width:100%;
+    background-color:white;
+  }
+
+  .rounded-well h1 {
+    font-size: 24px;
+  }
+
+  .rounded-well .well-heading {
+    padding:5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color:#260426;
+    color:white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .rounded-well .well-body {
+    padding:30px;
+    border: 1px solid #260426;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+    box-shadow: 0px 4px 4px 0px rgba(38,4,38,0.4);
+  }
+
+   label {
+    font-weight: bold;
+    margin-top:10px;
+   }
+
+   .btn-bedazzled {
+    background-color:#8f19fa;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 500;
+   }
+
+   ul.rules {
+      line-height:1.5em;
+      margin: 1em 0;
+      padding: 0 0 0 40px;
+   }
+
+   ul.rules li {
+      margin: 1em 0;
+   }
+
+   .bubble-right
+   {
+   position: relative;
+   margin-top:30px;
+/*   width: 250px;
+   height: 120px;*/
+   /*padding: 0px;*/
+   background: #FFFFFF;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   padding:30px;
+   }
+
+   .bubble-right:after 
+   {
+   content: '';
+   position: absolute;
+   border-style: solid;
+   border-width: 15px 0 15px 15px;
+   border-color: transparent #FFFFFF;
+   display: block;
+   width: 0;
+   z-index: 1;
+   right: -15px;
+   top: 45px;
+   }
+
+   .bubble-left 
+   {
+   position: relative;
+   margin-top:30px;
+/*   width: 250px;
+   height: 120px;*/
+   /*padding: 0px;*/
+   color:white;
+   padding:30px;
+   background: #47a7f1;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   }
+
+   .bubble-left:after 
+   {
+   content: '';
+   position: absolute;
+   border-style: solid;
+   border-width: 15px 15px 15px 0;
+   border-color: transparent #47a7f1;
+   display: block;
+   width: 0;
+   z-index: 1;
+   left: -15px;
+   top: 45px;
+   }
+
+</style>
+
+<div class="container" style="margin-top:30px;">
+    <div class="row">
+        <div class="col col-lg-6">
+            <div class="testimonial bubble-left">
+                Dear Mark and Tracy,<br>
+                <br>
+                I just wanted to send you a quick thank you for the past 10 years of my dance career.  You have truly captured the essence of what a dance competition should be - fun, competitive and rewarding!  Bedazzled has always been one of my favorite competitions and something I look forward to each and every May.  Whether it be the beautifully decorated special awards, the atmosphere of all the studios that compete there, the beautiful theatres that Bedazzled rent's out, or the incredible judges! Bedazzled has always been a special competition that I know at least every studio attends at least once in the season.  I have made so many friends over the years at Bedazzle that I run into at auditions all the time and keep in touch with. I have always loved sharing my love of dance on the Bedazzled stage, and have always felt welcome and comfortable enough to do so. I hope to visit you again next year to come watch and support your competition!  Just wanted to thank you so much for providing me with such terrific opportunities and making every May of the past ten years something truly magical. <br>
+                <br>
+                I will sincerely miss you two and this competition! <br>
+                <br>
+                Hope to see you soon!<br>
+                <br>
+                Yours truly,<br>
+                <br>
+                Bailey Woodman
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-6"></div>
+        <div class="col col-lg-6">
+
+            <div class="testimonial bubble-right">
+                <div class="testimonial">
+                    Just attended the competition at Blue Mountain this weekend and wanted to say how much we enjoyed ourselves at your event.  My main reason for emailing you is my daughter Katherine was given a gift from the host and he said some very nice things about her and mentioned he had watched her grow up etc.    He did give her a bag for her memories, as she is 18 and probably her last year.  When she was 8 he gave her a stuffed animal for her ballet solo.  So he basically gave her one of her ever first awards and one of her last and I just wanted to share that with you.<br>
+                    <br>
+                    Thanks again for the memories!<br>
+                    <br>
+                    Sandy
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    <div class="row">
+        <div class="col col-lg-6">
+            <div class="testimonial bubble-left">
+                Hi Tracy and Mark.<br>
+                <br>
+                I just wanted to take a few moments, on behalf of Katie and myself, to thank you for 9 great years of dance competitions.  It's hard to believe how quickly that time has passed!  Over the course of Katie's dance comp. life we have attended many a competition, but Bedazzled has always been one of our very favourites.  You run a very classy and positive event.  Along with your wonderful staff (including my buddies at RX Media), you both are especially genuine, caring people who have provided Katie with a wealth of great experiences.<br>
+                <br>
+                I want to say a special thank you to Mark for recognizing the "graduating" dancers and giving Katie the MC Mark award at the last session.  That meant so much to both of us, and I can tell you there were many of us adults in the audience who were on the hunt for a Kleenex during that presentation.<br>
+                <br>
+                As Katie heads off into a new direction in her dance life we will always treasure the time spent at Bedazzled, and she takes away from it many positive life lessons and character growth.  We wish you continued success and hope to see you again in the future.<br>
+                <br>
+                Many thanks again, and all the best! <br>
+                <br>
+                Maria and Katie Plouffe
+                </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-6"></div>
+        <div class="col col-lg-6">
+
+            <div class="testimonial bubble-right">
+                <div class="testimonial">
+                    I want to thank you for an awesome week in blue mountain! Emily loved the workshops, the opportunity to watch others dance and all the new friends she was able to meet.  You create a positive, supportive and enthusiastic environment for our younge dancers to celebrate their accomplishments.  Emily has come home with a renewed determination to learn new things. She keeps telling me she wants to have something "really good to show Miss Tracey and MC Mark next year".  Lol<br>
+                    <br>
+                    Gratefully yours, Annissa McClure
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col col-lg-6">
+            <div class="testimonial bubble-left">
+                "Thanks for a great weekend! All the parents are still talking about what a professional and fun competition you and Mark run!"<br>
+                Angela, Ontario
+
+                "Tracy and Mark, Just wanted to send you along a little note to let you know what a great job the two of you do (along with your family members) and to thank you for a great weekend! Everything is well run and all of your attention to details doesn't go unnoticed. We have had many positive comments from our parents on this as well. We always look forward to Bedazzled and wanted you to know this. Thanks again and best wishes for a great season!"<br>
+                <br>
+                Carolyn Carolyn, Dancesations
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br><br><br>
+
+<footer class="container-fluid text-center">
+  <div class="row bedazzled--main-foot-row">
+    <div class="col-sm-4">
+      <div class="bedazzled--main-foot-titles">
+         <img src="bedazzled_block_text.png" style="width:325px;margin-top:30px;">
+      </div>
+    </div>
+    <div class="col-sm-4" style="padding-top:30px;">
+      <address class="bedazzled--main-foot-addr">
+        Bedazzled Dance Champions, Inc.<br>
+        Tracy Covelli, Director<br>
+        <a href="tel:19054651593" style="color:white;">(905) 465-1593</a><br>
+        <a href="mailto:bedazzled@bellnet.ca?subject=Bedazzled%20Dance%20Champions" style="color:white;">bedazzled@bellnet.ca</a>
+      </address>
+    </div>
+    <div class="col-sm-4" style="padding-top:30px;">
+      <div class="bedazzled--main-foot-dots">
+        <div class="dot">
+          <a href="mailto:bedazzled@bellnet.ca?subject=Bedazzled%20Dance%20Champions">
+            <i class="fa fa-envelope fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="dot">
+          <a href="https://www.youtube.com/user/TheRXMI/videos">
+            <i class="fa fa-youtube-play fa-lg"></i>
+          </a>
+        </div>
+
+        <div class="dot">
+          <a href="https://www.twitter.com/BedazzledDance">
+            <i class="fa fa-twitter fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
